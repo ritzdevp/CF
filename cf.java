@@ -14,6 +14,7 @@ public class cf
             System.out.println("6 10 15 " + (n - 31));
             return;
         }
+        
         System.out.println("6 10 14 " + (n - 30));
     }
 
