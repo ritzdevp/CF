@@ -2,48 +2,20 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
-public class BEDU96
+public class dummy
 {
-    public static void func(long brr[], int K){
-        Long arr[] = new Long[brr.length];
-        for (int i = 0; i < brr.length; i++){
-            arr[i] = (Long)brr[i];
-        }
-        Arrays.sort(arr);
-        long min = arr[0];
-        int n = arr.length;
-        if (n == 1){
-            System.out.println(0);
-            return;
-        }
-        int j = n - 2;
-        int k = K;
-        if (k >= 1) min = 0;
-        while (k != 0){
-            arr[n - 1] += arr[j];
-            j--;
-            k--;
-        }
-
-        if (K >= 1){
-            System.out.println(arr[n - 1] - min);
-        }
-        else{
-            System.out.println(arr[n - 1] - arr[0]);
-        }
-    }
 
 	public static void main (String[] args) throws java.lang.Exception{
         //Scanner s = new Scanner(System.in);
         FastReader s = new FastReader();
-        int t = s.nextInt();
-        while (t-- != 0){
-            int n = s.nextInt();
-            int k = s.nextInt();
-            long arr[] = new long[n];
-            for (int i = 0; i < n; i++) arr[i] = s.nextLong();
-            func(arr, k);
+        int x = 10000;
+        PrintStream o = new PrintStream(new File("output.txt"));
+        PrintStream console = System.out;
+        System.setOut(o);
+        for (int i = 0; i < x; i++){
+            System.out.print(2 + " ");
         }
+
 
 	}
 
