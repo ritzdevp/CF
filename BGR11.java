@@ -10,7 +10,7 @@ public class BGR11
             int w = 0;
             int left = -1;
             int right = 0;
-            boolean allLost = true;
+            boolean allLost = true;    
             ArrayList<Integer> arr = new ArrayList<>();
 
             for (int i = 0; i < n; i++){
