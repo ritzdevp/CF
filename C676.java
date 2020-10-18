@@ -20,8 +20,10 @@ public class C676
             return;
         }
 
-        System.out.println(1);
-        System.out.println("L " + n);
+        System.out.println(3);
+        System.out.println("R " + (n - 1));
+        System.out.println("L " + (n));
+        System.out.println("L 2");
         return;
     }
 

@@ -94,7 +94,7 @@ public class B676
                 if (arr[n - 1][n - 2] == 1){
                     System.out.println(2);
                     System.out.println(1 + " " + 2);
-                    System.out.println((n) + " " + (n - 2));
+                    System.out.println((n) + " " + (n - 1));
                     return;
                 }
                 else if (arr[n -2][n - 1] == 1){
@@ -108,7 +108,7 @@ public class B676
                 if (arr[n - 1][n - 2] == 1){
                     System.out.println(2);
                     System.out.println(2 + " " + 1);
-                    System.out.println((n) + " " + (n - 2));
+                    System.out.println((n) + " " + (n - 1));
                     return;
                 }
                 else if (arr[n -2][n - 1] == 1){
