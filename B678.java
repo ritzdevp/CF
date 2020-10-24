@@ -17,71 +17,28 @@ public class B678
 
     public static void func(int n, boolean prime[], int help[]){
         int arr[][] = new int[n][n];
-        if (n == 2){
-            Arrays.fill(arr[0], 1);
-            Arrays.fill(arr[1], 1);
-            printMatrix(arr);
-            return;
-        }
-
-        if (prime[n]){
+        if (n % 2 == 0){
             for (int i = 0; i < n; i++){
-                Arrays.fill(arr[i], 1);
+                arr[i][i] = 1;
+            }
+            int q = 0;
+            for (int j = n - 1; j >= 0; j--){
+                arr[q++][j] = 1;
             }
             printMatrix(arr);
             return;
         }
 
-        // int x = help[n];
-        
-        // int start = 0, end = n - 1;
-        // int count = 0;
-        // for (int i = 0; i < x; i++){
-        //     arr[i][start] = 1;
-        //     arr[i][end] = 1;
-        // }
-        // int p = n - x;
-        // start++;
-        // end--;
-        // for (int i = x; i < p + x; i++){
-        //     arr[i][start] = 1;
-        //     arr[i][end] = 1;
-        // }
-        
-        // int current = help[n];
-        // System.out.println("current");
-        // while (count != n){
-        //     for (int i = count; i < count + current; i++){
-        //         System.out.println(i + " " + current);
-        //         arr[i][start] = 1;
-        //         arr[i][end] = 1;
-        //         count++;
-        //     }
-        //     start++;
-        //     end--;
-        //     current = help[current];
-            
-        // }
+        for (int i = 0; i < n; i++){
+            arr[i][i] = 1;
+        }
+        int q = 0;
+        for (int j = n - 1; j >= 0; j--){
+            arr[q++][j] = 1;
+        }
 
-        for (int i = 0; i < n; i++){
-            for (int j = 0; j < n; j++){
-                arr[i][j] = 100;
-            }
-        }
-        //System.out.println("n = " + n);
-        int sum = n * 100;
-        int x = help[sum];
-        int p = sum - x;
-        sum = sum - p;
-        while ((prime[100 - p] || !prime[sum])){
-            p++;
-            sum--;
-        }
-        
-        
-        for (int i = 0; i < n; i++){
-            arr[i][i] = 100 - p;
-        }
+        arr[n/2 - 1][n/2] = 1;
+        arr[n/2][n/2 - 1] = 1;
 
         printMatrix(arr);
         return;
