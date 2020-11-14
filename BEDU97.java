@@ -2,19 +2,22 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
-public class B680
+public class BEDU97
 {
-
 	public static void main (String[] args) throws java.lang.Exception{
         //Scanner s = new Scanner(System.in);
         FastReader s = new FastReader();
         int t = s.nextInt();
         while (t-- != 0){
-            int a = s.nextInt();
-            int b = s.nextInt();
-            int c = s.nextInt();
-            int d = s.nextInt();
-            System.out.println(Math.max(a + b, c + d));
+            int n = s.nextInt();
+            String str = s.nextLine();
+            int ans = 0;
+            for (int i = 0; i < n - 1; i++){
+                if (str.charAt(i) == str.charAt(i + 1)){
+                    ans++;
+                }
+            }
+            System.out.println((int)(Math.ceil(ans / 2.0)));
         }
 
 	}
